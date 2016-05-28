@@ -2,20 +2,46 @@
 layout: default
 ---
 
-<div class="home">
+<div class="row">
+  <div class="col-xs-12">
+		
+		{% include carousel.html %}
+		
+	</div>
+</div>
 
-  <h1 class="page-heading">Posts</h1>
+<div class="row">
+  <div class="col-xs-12">
+		
+		<h1 class="post-heading">Últimas noticias</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+		<ul class="novelty-list">
+			
+			{% assign items = site.novelties | sort:"date" | reverse %}
+			{% for item in items limit:3 %}
+			
+				<li>
+					<figure class="novelty-picture">
+						<img src="{{ site.url }}/images/{{ item.picture }}" alt="{{ item.title }}">
+					</figure>
+					
+					<div class="novelty-meta">
+						<span class="novelty-category">{{ item.categories | join: ', ' }}</span>
+						<span class="novelty-date">{{ item.date | date: "%-d/%m/%Y" }}</span>
+					</div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+					<h2 class="novelty-title">
+						<a href="{{ item.url | prepend: site.url }}">{{ item.title }}</a>
+					</h2>
+					
+					<div class="novelty-excerpt">{{ item.excerpt }}</div>
+					
+					<a href="{{ item.url | prepend: site.url }}" class="novelty-read-more">Leer más</a>
+				</li>
+			
+			{% endfor %}
+			
+		</ul>
 
+	</div>
 </div>
