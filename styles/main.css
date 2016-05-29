@@ -313,6 +313,9 @@ html body {
   color: #333;
   font-size: 16px;
 }
+html body > .container {
+  max-width: 970px;
+}
 html body > .container > .row:nth-of-type(1) {
   background-color: #242628;
   margin-bottom: 20px;
