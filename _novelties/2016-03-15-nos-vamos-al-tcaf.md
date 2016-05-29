@@ -1,12 +1,10 @@
 ---
 picture: TCAF.jpg
-
 title: ¡Nos vamos al TCAF!
-
 categories:
 - noticias
 excerpt: El 14 y 15 de mayo en Toronto se celebrará el TACF o Toronto Arts & Comics Festival, que, a nivel internacional, es uno de los eventos más importantes de small press
-excerpt: 
+excerpt:
 excerpt_separator: <!-- read more -->
 ---
 
