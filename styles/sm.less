@@ -1,0 +1,501 @@
+// compress: false, main: main.less
+
+@media (min-width: 768px) {
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////// THIS IS THE BEGINNING
+
+html {
+	
+	body {
+		
+		> .container {
+			
+			> .row {
+				
+				&:nth-of-type(1) {
+					.hide;
+				}
+				
+				&:nth-of-type(2) {
+					
+					.col-xs-12 {
+					
+						.navbar {
+							margin-top: 16px * 1.5; margin-bottom: 16px;
+
+							.container-fluid {
+								.clearfix;
+
+								.navbar-header {
+									float: left;
+									
+									.navbar-brand {
+										font-size: 80px * 1.25;
+										height: auto; width: auto;
+										text-align: left;
+									}
+								}
+
+								.navbar-nav {
+									float: right;
+									margin-top: 48px;
+									text-align: right;
+								}
+							}
+						}
+					}
+				}
+				
+				&:nth-of-type(3) {
+					.show;
+					
+					.col-xs-12 {
+						.navbar {
+							background-color: transparent;
+							border: 0;
+							border-radius: 0;
+							border-top: 1px solid #333; border-bottom: 3px solid #333;
+							margin-bottom: 16px * 1.5;
+
+							.container-fluid {
+								padding-right: 0; padding-left: 0;
+
+								.navbar-header {
+									.hide;
+								}
+
+								.navbar-collapse {
+									border: none;
+									text-align: center;
+
+									.navbar-nav {
+										.show;
+										float: none;
+										margin: 0 auto;
+										text-align: center;
+										
+										li {
+											border: none;
+											display: inline-block;
+											float: none;
+											font-size: 18px;
+											
+											&:last-child {
+												
+												&:after {
+													.hide;
+												}
+											}
+											
+											&:after {
+												content: "/";
+												color: #eee;
+												font: normal 24px/24px Helvetica, Arial;
+												display: block;
+												float: left;
+												width: 6px;
+												margin-top: 14px;
+											}
+											
+											&.dropdown {
+												
+												a {
+													
+													.caret {
+														
+													}
+												}
+												
+												.dropdown-menu {
+													padding-top: 0; padding-bottom: 0;
+													
+													li {
+														
+														&:after {
+															.hide;
+														}
+														
+														a {
+															font-size: 70%;
+															
+															&:focus,
+															&:hover {
+																background-color: transparent;
+																outline: 0;
+																outline-offset: 0;
+															}
+														}
+													}
+												}
+											}
+											
+											&.dropdown.open {
+												
+												.dropdown-toggle {
+													background-color: transparent;
+													
+													&:hover {
+														background: rgba(255,255,255,.1);
+													}
+												}
+											}
+											
+											a {
+												.Oswald; .normal;
+												color: #333;
+												font-size: 18px;
+												letter-spacing: 1px;
+												text-transform: uppercase;
+												height: 50px;
+												line-height: 50px;
+												padding: 0;
+												padding-left: 15px;
+												padding-right: 15px;
+												display: block;
+												float: left;
+												
+												&:hover {
+													color: #e285d1;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				
+				&:last-of-type {
+					
+					.col-xs-12 {
+					
+						#back-to-top {
+							margin: 32px * 2 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+
+#carousel-example-generic {
+
+	&:hover {
+
+		.carousel-inner {
+
+			.item {
+
+				&:before {
+					opacity: .8;
+				}
+			}
+		}
+	}
+
+	.carousel-inner {
+
+		.item {
+
+			&:before {
+			}
+
+			img {
+			}
+
+			.carousel-caption {
+
+				p {
+					font-size: 56px;
+					letter-spacing: 1px;
+					line-height: 1.1em;
+					text-align: center;
+				}
+
+				a {
+					.show;
+					color: White;
+					height: 100%; width: 100%;
+					position: absolute;
+					top: 0; left: 0;
+					
+					span {
+						.Oswald; .normal;
+						.show;
+						border: 3px solid White;
+						letter-spacing: 1px;
+						padding: 16px;
+						position: absolute;
+						bottom: 12.5%;
+						left: 15%; right: 15%;
+						text-transform: uppercase;
+						
+						&:hover {
+							box-shadow: 3px 3px 0 #333;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.carousel-control {
+		
+		&:hover {
+			
+			span {
+				text-shadow: 3px 3px 0 #000;
+			}
+		}
+	}
+}
+	
+#latest-news {
+
+	h1 {
+		font-size: 48px;
+		margin: 16px * 3 0 16px * 2 0;
+	}
+
+	.novelty-list {
+
+		.recent-novelty {
+
+			article {
+				margin-bottom: 16px * 3;
+
+				.novelty-meta {
+					font-size: 12px;
+					letter-spacing: 1px;
+					margin: 16px 0 16px / 2 0;
+				}
+
+				.novelty-title {
+					font-size: 18px;
+					letter-spacing: 1px;
+					line-height: 1.5em;
+					margin: 16px / 2 0 16px 0;
+				}
+
+				.novelty-excerpt {
+					font-size: 16px;
+					line-height: 1.5em;
+				}
+
+				.novelty-read-more {
+					font-size: 14px;
+					letter-spacing: 1px;
+					margin: 16px 0;
+				}
+			}
+		}
+	}
+}
+
+.default-post {
+	
+	.default-header {
+		
+		.novelty-meta {
+			font-size: 16px;
+			letter-spacing: 1px;
+			margin: 16px 0 0 0;
+		}
+		
+		.default-title {
+			font-size: 48px;
+			letter-spacing: 1px;
+			line-height: 1.5em;
+			margin: 0 0 16px 0;
+		}
+	}
+	
+	.default-content {
+		
+		h2 {
+			font-size: 28px;
+			letter-spacing: 1px;
+			line-height: 1.5em;
+		}
+		
+		h3 {
+			font-size: 22px;
+			letter-spacing: 1px;
+			line-height: 1.5em;
+		}
+		
+		p {
+			line-height: 1.5em;
+		}
+	}
+	
+	.novelty-share {
+		padding: 16px 0 16px * 1 0;
+		margin: 16px * 2 0;
+		margin-bottom: 0;
+		
+		h2 {
+			.Oswald; .bold;
+			font-size: 18px;
+			text-align: center;
+			margin: 16px / 2 0 16px / 4 0;
+		}
+		
+		.ssk-group {
+			width: 100%;
+		
+			a {
+				display: inline-block;
+				font-size: 12px;
+				letter-spacing: 1px;
+				line-height: 1.5em;
+				margin: 16px 0;
+				width: calc(100% / 5);
+			}
+		}
+	}
+	
+	.novelty-navigation {
+		.clearfix;
+		border-bottom: 1px solid #333;
+		margin: 0;
+		
+		a {
+			.clearfix;
+			border-bottom: none;
+			float: left;
+			font-size: 12px;
+			letter-spacing: 1px;
+			line-height: 1.5em;
+			padding: 16px * 2;
+			width: 50%;
+			
+			&:nth-child(1) {
+				border-right: 1px solid #333;
+				
+				.glyphicon {
+					.show;
+					float: left;
+					margin-left: -16px;
+					padding-right: 16px;
+					text-align: left;
+				}
+			}
+			
+			&:nth-child(2) {
+				border-left: 1px solid #333;
+				margin-left: -1px;
+				
+				.glyphicon {
+					.show;
+					float: right;
+					margin-right: -16px;
+					padding-left: 16px;
+					text-align: right;
+				}
+			}
+			
+			.glyphicon {
+				.show;
+				font-size: 18px;
+			}
+			
+			b {
+				font-size: 18px;
+				margin-bottom: 16px / 4;
+			}
+		}
+	}
+	
+	.novelty-related {
+	}
+}
+
+#article.novelty {
+	
+	.novelty-content {
+		
+		p {
+			
+			&:first-child:first-letter {
+				float: left;
+				font-size: 16px * 4;
+				line-height: 16px * 4;
+				padding: 0 4px 0 0;
+			}
+		}
+	}
+}
+
+#latest-news {
+	
+	.default-header {
+		
+		.default-title {
+			.Oswald; .normal;
+			font-size: 48px;
+			letter-spacing: 1px;
+			line-height: 1.5em;
+			margin: 16px / 2 0 16px 0;
+		}
+	}
+}
+
+#authors {
+	
+	.default-header {
+		
+		.default-title {
+			font-size: 48px;
+			letter-spacing: 1px;
+			line-height: 1.5em;
+			margin: 16px / 2 0 16px 0;
+		}
+	}
+	
+	.author-list {
+		padding: 0;
+		
+		li {
+			margin: 16px 0 16px * 2 0;
+			
+			&:nth-child(odd) {
+				
+				.author-picture {
+					margin: 0 16px 16px 0;
+				}
+			}
+			
+			&:nth-child(even) {
+				
+				.author-picture {
+					margin: 0 0 16px 16px;
+				}
+			}
+			
+			.author-description {
+				
+				p {
+					line-height: 1.5em;
+				}
+			}
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////// THIS IS THE END
+
+}

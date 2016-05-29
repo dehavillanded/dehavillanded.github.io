@@ -1,0 +1,48 @@
+title: Dehavilland Ediciones
+email: hello@dehavilland.co
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://127.0.0.1:4000" # the base hostname & protocol for your site
+
+markdown: kramdown
+permalink: pretty
+timezone: Europe/Madrid
+
+collections:
+  authors:
+    output: false
+  novelties:
+    output: true
+    permalink: /noticias/:path/
+  slides:
+    output: false
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  -
+    scope:
+      path: ""
+      type: "novelties"
+    values:
+      layout: "novelty"
+  -
+    scope:
+      path: ""
+      type: "slides"
+    values:
+      layout: "default"
+
+gems:
+  - jekyll-mentions
+  - jemoji
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-feed
