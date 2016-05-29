@@ -4,7 +4,6 @@ title: La Muerte y Román Tesoro
 categories:
 - la mansión en llamas
 excerpt:
-excerpt: la mansión en llamas
 excerpt_separator: <!-- read more -->
 ---
 
