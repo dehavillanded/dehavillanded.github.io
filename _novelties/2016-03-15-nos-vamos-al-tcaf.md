@@ -1,11 +1,8 @@
 ---
 picture: TCAF.jpg
-
 title: ¡Nos vamos al TCAF!
-
 categories:
 - noticias
-
 excerpt: 
 excerpt_separator: <!-- read more -->
 ---

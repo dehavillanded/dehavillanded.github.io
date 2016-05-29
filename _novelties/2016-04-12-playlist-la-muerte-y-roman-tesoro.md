@@ -1,13 +1,9 @@
 ---
 picture: bailaré.jpg
-
 title: Playlist "La Muerte y Román Tesoro"
-
 categories:
-
 - la mansión en llamas
 - noticias
-
 excerpt: 
 excerpt_separator: <!-- read more -->
 ---
