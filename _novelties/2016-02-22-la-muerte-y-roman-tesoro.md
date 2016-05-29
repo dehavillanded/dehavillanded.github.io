@@ -1,9 +1,16 @@
 ---
 picture: roman.jpg
+
 title: La Muerte y Román Tesoro
+
 categories:
 - la mansión en llamas
+<<<<<<< HEAD
 excerpt:
+=======
+
+excerpt: la mansión en llamas
+>>>>>>> parent of 422bdfa... update
 excerpt_separator: <!-- read more -->
 ---
 

@@ -1,8 +1,11 @@
 ---
 picture: funfanfest.jpg
+
 title: Nos vemos en el FUN FAN FEST
+
 categories:
 - la mansión en llamas
+
 excerpt: El próximo sábado 13 de febrero, nos instalaremos en la Fabra i Coats de Barcelona para formar parte del 2o encuentro de creativos, autores, autoeditores y pequeños editores de material gráfico, el FUN FAN FEST.
 excerpt_separator: <!-- read more -->
 ---

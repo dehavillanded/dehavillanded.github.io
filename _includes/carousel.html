@@ -6,11 +6,7 @@
 			<img src="{{ site.url }}/images/{{ slide.figure }}" alt="{{ slide.caption }}">
 			<div class="carousel-caption">
 				<p>{{ slide.caption }}</p>
-				{% if slide.button_text %}
-					<a href="{{ slide.button_link }}"><span>{{ slide.button_text }}</span></a>
-				{% else %}
-					<a href="{{ slide.button_link }}"></a>
-				{% endif %}
+				<a href="{{ slide.button_link }}">{{ slide.button_text }}</a>
 			</div>
 		</div>
     {% endfor %}

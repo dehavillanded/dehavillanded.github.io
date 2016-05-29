@@ -1,8 +1,11 @@
 ---
 picture: webloren.jpg
+
 title: Presentamos a Román Tesoro en Barcelona
+
 categories:
 - noticias
+
 excerpt: Le toca el turno de exhibir fuerza en la Galería Visions a Lorenzo Montatore y su “La muerte y Román Tesoro”.
 excerpt_separator: <!-- read more -->
 ---

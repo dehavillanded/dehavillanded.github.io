@@ -1,100 +1,15 @@
 ---
-layout: default
+layout: novelty
 ---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-<div class="row">
-  <div class="col-xs-12">
-		
-		<article id="article" class="default-post novelty" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+  </header>
 
-			<header class="default-header novelty-header">
-				<div class="novelty-meta">
-					<span class="novelty-category">{{ page.categories | join: ', ' }}</span>&nbsp;/&nbsp;<span class="novelty-date">{{ page.date | date: "%-d/%m/%Y" }}</span>
-				</div>
-				<h1 class="default-title novelty-title" itemprop="name headline">{{ page.title }}</h1>
-			</header>
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
 
-			<div class="default-content novelty-content" itemprop="articleBody">
-				{{ content }}
-			</div>
-			
-			<aside class="novelty-share">
-				<h2>Compartir en:</h2>
-				<div class="ssk-group" data-url="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" data-text="{{ page.excerpt }}" >
-					<a href="" class="ssk ssk-facebook">Facebook</a>
-					<a href="" class="ssk ssk-twitter" data-text="{{ page.excerpt }}">Twitter</a>
-					<a href="" class="ssk ssk-google-plus">Google +</a>
-					<a href="" class="ssk ssk-pinterest">Pinterest</a>
-					<a href="" class="ssk ssk-tumblr" data-media="{{ page.picture }}">Tumblr</a>
-				</div>
-			</aside>
-			
-			<aside class="novelty-navigation">
-				
-				{% for c in site.novelties %}
-				{% if c.title == page.title %}
-					{% assign thisPost = c %}
-					{% if forloop.index == 1 %}
-						{% assign prevflag = 0 %}
-						{% assign nextflag = 1 %}
-					{% elsif forloop.index == forloop.length %}
-						{% assign prevflag = 1 %}
-						{% assign nextflag = 0 %}
-					{% else %}
-						{% assign prevflag = 1 %}
-						{% assign nextflag = 1 %}
-					{% endif %}  
-				{% endif %}
-				{% endfor %}
-
-				{% for c in site.novelties %}
-					{% if c.title == page.title %}
-						{% assign prevflag = 0 %}
-					{% endif %}
-					{% if prevflag == 1 %}
-						{% assign prevPost = c %}
-						{% assign page.previous = c %}
-					{% endif %}
-				{% endfor %}
-
-				{% if nextflag == 1 %}
-					{% for c in site.novelties %}
-						{% if foundPost == 1 %}
-							{% assign getNext = 1 %}
-						{% endif %}
-						{% if c.title == page.title %}
-							{% assign foundPost = 1 %}        
-						{% endif %}
-						{% if getNext == 1%}
-							{% assign nextPost = c %}
-							{% assign page.next = c %}
-							{% assign foundPost = 0 %}
-							{% assign getNext = 0 %}
-						{% endif %}
-					{% endfor %}
-				{% endif %}
-
-				{% if prevPost.url %}
-					<a class="previous-novelty" href="{{prevPost.url}}">
-						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-						<b>Previous article</b>
-						{{prevPost.title}}
-					</a> 
-					{% endif %} 
-					{% if nextPost.url %} 
-					<a class="next-novelty" href="{{nextPost.url}}">
-						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-						<b>Next article</b>
-						{{nextPost.title}}
-					</a> 
-				{% endif %} 
-				
-			</aside>
-			
-			<aside class="novelty-related">
-			</aside>
-
-		</article>
-		
-	</div>
-</div>
+</article>
