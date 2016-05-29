@@ -38,7 +38,7 @@ defaults:
       path: ""
       type: "slides"
     values:
-      layout: "slide"
+      layout: "default"
 
 gems:
   - jekyll-mentions
