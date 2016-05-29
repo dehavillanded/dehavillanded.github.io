@@ -3,7 +3,7 @@ picture: roman.jpg
 title: La Muerte y Román Tesoro
 categories:
 - la mansión en llamas
-excerpt: la mansión en llamas
+excerpt:
 excerpt_separator: <!-- read more -->
 ---
 
